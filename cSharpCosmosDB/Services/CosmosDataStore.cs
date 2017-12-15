@@ -28,24 +28,7 @@ namespace cSharpCosmosDB.Services
             if (repo == null)
             {
                 MongoClientSettings settings = MongoClientSettings.FromUrl(new MongoUrl(dsn));
-                settings.SslSettings = new SslSettings()
-                {
-                    EnabledSslProtocols = SslProtocols.Tls12
-                    //,ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-                    //{
-                    //    foreach (var element in chain.ChainElements)
-                    //    {
-                    //        // Gets the error status of the current X.509 certificate in a chain.
-                    //        foreach (var status in element.ChainElementStatus)
-                    //        {
-                    //            Debug.WriteLine($"certificate subject: {element.Certificate.Subject},ChainStatus: {status.StatusInformation}");
-                    //            Trace.WriteLine($"certificate subject: {element.Certificate.Subject},ChainStatus: {status.StatusInformation}");
-                    //        }
-                    //    }
-                    //    return true; //just for dev, it would bypass certificate errors
-                    //}
-
-                };
+                settings.SslSettings = new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
                 mongoClient = new MongoClient(settings);
                 repo = mongoClient.GetDatabase(databaseName);
             }
