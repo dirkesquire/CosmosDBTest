@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="cSharpCosmosDB.Views.CosmosTest">
+	<ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label FontSize="18" FontAttributes="Bold">COSMOS DB</Label>
+                <Label>The purpose of this page is to demo Cosmos and test out Meeting CODE generation</Label>
+
+                <Button x:Name="btnDBConnect" Text="Connect to Database" BorderWidth="0" BackgroundColor="#0183ee" TextColor="White" Clicked="btnConnect_Click" />
+                <Label x:Name="lblConnected">Disconnected</Label>
+
+                <Button x:Name="btnCountBooks" Text="Count Books (2)" BorderWidth="0" BackgroundColor="#0183ee" TextColor="White" Clicked="btnCountBooks_Click" />
+                <Label x:Name="lblCountBooks"></Label>
+                
+                <Button x:Name="btnCount" Text="Count Meetings" BorderWidth="0" BackgroundColor="#0183ee" TextColor="White" Clicked="btnCount_Click2" />
+                <Label x:Name="lblCount"></Label>
+                
+                <Button x:Name="btnGenerate" Text="GENERATE" BorderWidth="0" BackgroundColor="#0183ee" TextColor="White" Clicked="btnGenerate_Click"/>
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label x:Name="lblCode"></Label>
+                </StackLayout>
+
+                <Button x:Name="btnDeleteAll" Text="Delete all Meetings" BorderWidth="0" BackgroundColor="#0183ee" TextColor="White" Clicked="btnDelete_Click" />
+                
+           </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
