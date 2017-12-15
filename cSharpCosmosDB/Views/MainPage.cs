@@ -1,5 +1,5 @@
 ﻿using System;
-
+using cSharpCosmosDB.Views;
 using Xamarin.Forms;
 
 namespace cSharpCosmosDB
@@ -13,7 +13,7 @@ namespace cSharpCosmosDB
             switch (Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    itemsPage = new NavigationPage(new ItemsPage())
+                    itemsPage = new NavigationPage(new CosmosTest())
                     {
                         Title = "Browse"
                     };
@@ -26,7 +26,7 @@ namespace cSharpCosmosDB
                     aboutPage.Icon = "tab_about.png";
                     break;
                 default:
-                    itemsPage = new ItemsPage()
+                    itemsPage = new CosmosTest()
                     {
                         Title = "Browse"
                     };
